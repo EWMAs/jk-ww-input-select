@@ -664,6 +664,29 @@ export default {
         },
 
         // >>>>>>>>>>> TRIGGER <<<<<<<<<<
+        placeholderByJoyce: {
+            label: {
+                en: 'Placeholder',
+                fr: 'Texte par défaut',
+            },
+            type: 'Text',
+            defaultValue: { en: 'Best placeholder in the world' },
+            section: 'settings',
+            states: true,
+            bindable: true,
+            responsive: true,
+            multiLang: true,
+            /* wwEditor:start */
+            bindingValidation: {
+                type: 'string',
+                tooltip: 'A string value: "Select a value"',
+            },
+            propertyHelp: {
+                tooltip:
+                    'The placeholder text for the select. Available in the formula explorer in the Trigger element.',
+            },
+            /* wwEditor:end */
+        },
         placeholder: {
             label: {
                 en: 'Placeholder',
