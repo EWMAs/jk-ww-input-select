@@ -19,6 +19,7 @@ export default {
                 label: "Selected",
                 isCollapsible: true,
                 properties: [
+                    'selectedFontSizeByJoyce',
                     'selectedFontFamily',
                     'selectedFontSize',
                     'selectedFontWeight',
@@ -1245,6 +1246,29 @@ export default {
             bindable: true,
             responsive: true,
             defaultValue: '14px',
+            /* wwEditor:start */
+            bindingValidation: {
+                type: 'string',
+                tooltip: 'A length value: "14px", "1rem", "100%", etc.',
+            },
+            /* wwEditor:end */
+            hidden: content => content.selectType !== 'single',
+        },
+        selectedFontSizeByJoyce: {
+            type: 'Length',
+            label: {
+                en: 'Font size',
+            },
+            options: {
+                unitChoices: [{ value: 'px', label: 'px', min: 1, max: 500 }],
+                noRange: true,
+                useVar: true,
+            },
+            states: true,
+            classes: true,
+            bindable: true,
+            responsive: true,
+            defaultValue: '18px',
             /* wwEditor:start */
             bindingValidation: {
                 type: 'string',
