@@ -670,7 +670,7 @@ export default {
                 fr: 'Texte par défaut',
             },
             type: 'Text',
-            defaultValue: { en: 'Select a value' },
+            defaultValue: { en: 'Select a Pokemon' },
             section: 'settings',
             states: true,
             bindable: true,
